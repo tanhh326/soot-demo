@@ -1,0 +1,23 @@
+digraph "void sout(int)" {
+    label="void sout(int)";
+    node [shape=box];
+    "0" [style=filled,fillcolor=gray,label="r5 := @this",];
+    "1" [label="i0 := @parameter0",];
+    "0"->"1";
+    "2" [label="$r1 = java.lang.System.out",];
+    "1"->"2";
+    "3" [label="$r0 = new java.lang.StringBuilder",];
+    "2"->"3";
+    "4" [label="specialinvoke $r0.<init>()",];
+    "3"->"4";
+    "5" [label="$r2 = $r0.append(\"k = \")",];
+    "4"->"5";
+    "6" [label="$r3 = $r2.append(i0)",];
+    "5"->"6";
+    "7" [label="$r4 = $r3.toString()",];
+    "6"->"7";
+    "8" [label="$r1.println($r4)",];
+    "7"->"8";
+    "9" [style=filled,fillcolor=lightgray,label="return",];
+    "8"->"9";
+}

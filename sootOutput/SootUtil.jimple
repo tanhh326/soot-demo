@@ -1,0 +1,150 @@
+public class SootUtil extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        SootUtil r0;
+
+        r0 := @this: SootUtil;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void generalInitial(java.lang.String)
+    {
+        soot.options.Options $r0, $r1, $r2, $r3, $r4, $r7, $r8;
+        java.lang.String r5;
+        java.util.List $r6;
+        soot.Scene $r9, $r10, $r11, $r12;
+
+        r5 := @parameter0: java.lang.String;
+
+        staticinvoke <soot.G: void reset()>();
+
+        $r0 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r0.<soot.options.Options: void set_allow_phantom_refs(boolean)>(1);
+
+        $r1 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r1.<soot.options.Options: void set_prepend_classpath(boolean)>(1);
+
+        $r2 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r2.<soot.options.Options: void set_validate(boolean)>(1);
+
+        $r3 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r3.<soot.options.Options: void set_src_prec(int)>(1);
+
+        $r4 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        $r6 = staticinvoke <java.util.Collections: java.util.List singletonList(java.lang.Object)>(r5);
+
+        virtualinvoke $r4.<soot.options.Options: void set_process_dir(java.util.List)>($r6);
+
+        $r7 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r7.<soot.options.Options: void set_whole_program(boolean)>(1);
+
+        $r8 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r8.<soot.options.Options: void set_no_bodies_for_excluded(boolean)>(1);
+
+        $r9 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r9.<soot.Scene: void addBasicClass(java.lang.String,int)>("java.io.PrintStream", 2);
+
+        $r10 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r10.<soot.Scene: void addBasicClass(java.lang.String,int)>("java.lang.System", 2);
+
+        $r11 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r11.<soot.Scene: void addBasicClass(java.lang.String,int)>("java.lang.Thread", 2);
+
+        $r12 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r12.<soot.Scene: void loadNecessaryClasses()>();
+
+        return;
+    }
+
+    public static void outputInitial(java.lang.String, int)
+    {
+        soot.options.Options $r0, $r1, $r2, $r3, $r4, $r5, $r6, $r9, $r10;
+        int i0;
+        java.lang.String r7;
+        java.util.List $r8;
+        soot.Scene $r11, $r12, $r13, $r14;
+        soot.PackManager $r15;
+
+        r7 := @parameter0: java.lang.String;
+
+        i0 := @parameter1: int;
+
+        staticinvoke <soot.G: void reset()>();
+
+        $r0 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r0.<soot.options.Options: void set_allow_phantom_refs(boolean)>(1);
+
+        $r1 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r1.<soot.options.Options: void set_prepend_classpath(boolean)>(1);
+
+        $r2 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r2.<soot.options.Options: void set_validate(boolean)>(1);
+
+        $r3 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r3.<soot.options.Options: void set_output_format(int)>(i0);
+
+        $r4 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r4.<soot.options.Options: void set_output_dir(java.lang.String)>("../SootOutput");
+
+        $r5 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r5.<soot.options.Options: void set_src_prec(int)>(1);
+
+        $r6 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        $r8 = staticinvoke <java.util.Collections: java.util.List singletonList(java.lang.Object)>(r7);
+
+        virtualinvoke $r6.<soot.options.Options: void set_process_dir(java.util.List)>($r8);
+
+        $r9 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r9.<soot.options.Options: void set_whole_program(boolean)>(1);
+
+        $r10 = staticinvoke <soot.options.Options: soot.options.Options v()>();
+
+        virtualinvoke $r10.<soot.options.Options: void set_no_bodies_for_excluded(boolean)>(1);
+
+        $r11 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r11.<soot.Scene: void addBasicClass(java.lang.String,int)>("java.io.PrintStream", 2);
+
+        $r12 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r12.<soot.Scene: void addBasicClass(java.lang.String,int)>("java.lang.System", 2);
+
+        $r13 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r13.<soot.Scene: void addBasicClass(java.lang.String,int)>("java.lang.Thread", 2);
+
+        $r14 = staticinvoke <soot.Scene: soot.Scene v()>();
+
+        virtualinvoke $r14.<soot.Scene: void loadNecessaryClasses()>();
+
+        $r15 = staticinvoke <soot.PackManager: soot.PackManager v()>();
+
+        virtualinvoke $r15.<soot.PackManager: void writeOutput()>();
+
+        return;
+    }
+}
